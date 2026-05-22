@@ -113,8 +113,11 @@
 
   .gradient-hero { background: var(--gradient-hero); }
   .gradient-leaf { background: var(--gradient-leaf); }
+  .gradient-leaf-soft { background: var(--gradient-leaf-soft); }
   .gradient-gold { background: var(--gradient-gold); }
   .gradient-dark { background: var(--gradient-dark); }
+  .gradient-emerald { background: var(--gradient-emerald); }
+  .gradient-mesh { background: var(--gradient-mesh); }
 
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
