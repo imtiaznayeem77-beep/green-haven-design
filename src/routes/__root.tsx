@@ -1,6 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
-  Outlet,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
@@ -116,5 +115,3 @@ function RootComponent() {
   );
 }
 
-// Avoid unused import for Outlet (kept for type compat)
-export const _unused = Outlet;
