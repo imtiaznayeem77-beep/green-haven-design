@@ -82,9 +82,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" },
     ],
-    scripts: [
-      { type: "application/ld+json", children: JSON.stringify(orgJsonLd) },
-    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -111,6 +108,11 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SiteLayout />
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
     </QueryClientProvider>
   );
 }

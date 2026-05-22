@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { CtaBanner } from "@/components/CtaBanner";
+import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { PROJECTS } from "@/lib/site";
 
@@ -85,6 +86,7 @@ function GalleryPage() {
         </div>
       )}
 
+      <GoogleReviewsWidget />
       <CtaBanner />
     </>
   );

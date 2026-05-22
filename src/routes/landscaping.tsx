@@ -4,7 +4,16 @@ import { Check } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { CtaBanner } from "@/components/CtaBanner";
 import { BeforeAfter } from "@/components/BeforeAfter";
+import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
+import { FaqSection } from "@/components/FaqSection";
 import { PROJECTS } from "@/lib/site";
+
+const LANDSCAPING_FAQS = [
+  { q: "Do you design as well as build?", a: "Yes — we offer simple design input as standard and can produce more detailed plans for larger projects. The aim is always a garden you'll love to use and look at." },
+  { q: "How long does a landscaping project take?", a: "Small refreshes can be done in a day or two. Full transformations typically take 1–3 weeks depending on scope, planting and any hard landscaping involved." },
+  { q: "Can you work with my existing plants and features?", a: "Absolutely. We'll always look at what can be saved, lifted or repositioned before suggesting anything new — it's better for the garden and for your budget." },
+  { q: "Do you handle paving, fencing and patios?", a: "Yes — we deliver complete outdoor builds including patios, pathways, raised beds, fencing and decorative stonework as part of full landscaping projects." },
+];
 
 export const Route = createFileRoute("/landscaping")({
   head: () => ({
@@ -62,6 +71,8 @@ function LandscapingPage() {
         </div>
       </section>
 
+      <GoogleReviewsWidget />
+      <FaqSection items={LANDSCAPING_FAQS} title="Landscaping questions, answered" />
       <CtaBanner />
     </>
   );

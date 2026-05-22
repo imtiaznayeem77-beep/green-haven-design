@@ -3,7 +3,18 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { CtaBanner } from "@/components/CtaBanner";
+import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
+import { FaqSection } from "@/components/FaqSection";
+import { AreasWeCover } from "@/components/AreasWeCover";
 import { SERVICES } from "@/lib/site";
+
+const SERVICES_FAQS = [
+  { q: "Can I book just one service or do I need a package?", a: "Either works. Book a single one-off service like a hedge cut or lawn restoration, or combine multiple into a regular maintenance plan — whatever suits your garden." },
+  { q: "How is pricing worked out?", a: "Every garden is different, so we quote per job after seeing the space. No hidden fees, no hourly surprises — just a clear written price up front." },
+  { q: "Do you bring your own equipment?", a: "Yes, always. We arrive with professional-grade mowers, strimmers, hedge cutters and everything needed to complete the job to a premium standard." },
+  { q: "What happens with the garden waste?", a: "We take it all away. Green waste is removed, recycled and disposed of responsibly — you're left with a clean, tidy garden, nothing else." },
+  { q: "Can you maintain my garden while I'm away?", a: "Absolutely. Many of our customers book regular visits while travelling. We'll keep everything looking immaculate and send updates if you'd like them." },
+];
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -93,6 +104,9 @@ function ServicesPage() {
         </div>
       </section>
 
+      <GoogleReviewsWidget />
+      <FaqSection items={SERVICES_FAQS} title="Service questions, answered" />
+      <AreasWeCover />
       <CtaBanner title="Need help with your garden?" subtitle="Tell us what you'd like done — we'll come back with a free, honest quote." />
     </>
   );

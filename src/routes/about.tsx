@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Heart, ShieldCheck, Sparkles, Leaf, Award, Smile, Wrench, Star } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { CtaBanner } from "@/components/CtaBanner";
+import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({
@@ -79,6 +81,8 @@ function AboutPage() {
         </div>
       </section>
 
+      <WhyChooseUs />
+      <GoogleReviewsWidget />
       <CtaBanner />
     </>
   );

@@ -4,7 +4,16 @@ import { Check } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { CtaBanner } from "@/components/CtaBanner";
 import { BeforeAfter } from "@/components/BeforeAfter";
+import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
+import { FaqSection } from "@/components/FaqSection";
 import { PROJECTS } from "@/lib/site";
+
+const MAINT_FAQS = [
+  { q: "How often will you visit?", a: "Most customers pick fortnightly or monthly visits depending on the season and the size of their garden. We'll recommend a frequency that keeps it looking great year-round." },
+  { q: "Can I be at home or do I need to be in?", a: "Either is fine. Many customers leave us a key or side gate access — we let ourselves in, do the work, and lock up when we leave." },
+  { q: "Will the same person come every time?", a: "Yes — Grant or a regular team member you'll come to recognise. Continuity matters, both for quality and for knowing your garden inside out." },
+  { q: "What happens in winter?", a: "Maintenance carries on, just at a lighter pace — leaf clearance, tidying, pruning and prep work that pays off when spring arrives." },
+];
 
 export const Route = createFileRoute("/garden-maintenance")({
   head: () => ({
@@ -60,6 +69,8 @@ function GardenMaintenancePage() {
         </div>
       </section>
 
+      <GoogleReviewsWidget />
+      <FaqSection items={MAINT_FAQS} title="Maintenance questions, answered" />
       <CtaBanner />
     </>
   );
