@@ -23,8 +23,8 @@ export const Route = createFileRoute("/landscaping")({
       { property: "og:title", content: "Landscaping in Northamptonshire" },
       { property: "og:description", content: "Garden transformations, lawn improvements & full landscape makeovers." },
       { property: "og:url", content: "/landscaping" },
-      { property: "og:image", content: "/hero/service-landscaping.jpg" },
-      { name: "twitter:image", content: "/hero/service-landscaping.jpg" },
+      { property: "og:image", content: "/services/landscaping.jpg" },
+      { name: "twitter:image", content: "/services/landscaping.jpg" },
     ],
     links: [{ rel: "canonical", href: "/landscaping" }],
   }),
@@ -40,7 +40,7 @@ function LandscapingPage() {
         eyebrow="Landscaping"
         title="Beautiful gardens, beautifully built."
         subtitle="Premium landscaping and full garden transformations across Northamptonshire."
-        image="/hero/service-landscaping.jpg"
+        image="/services/landscaping.jpg"
       />
 
       <section className="container-prose py-24 grid lg:grid-cols-2 gap-14 items-center">
@@ -56,7 +56,7 @@ function LandscapingPage() {
             ))}
           </ul>
         </motion.div>
-        <motion.img initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} src="/hero/service-landscaping.jpg" alt="Premium landscaped garden" loading="lazy" className="rounded-3xl aspect-[4/3] object-cover shadow-elegant" />
+        <motion.img initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} src="/services/landscaping.jpg" alt="Premium landscaped garden" loading="lazy" className="rounded-3xl aspect-[4/3] object-cover shadow-elegant" />
       </section>
 
       <section className="bg-card border-y border-border/60 py-24">

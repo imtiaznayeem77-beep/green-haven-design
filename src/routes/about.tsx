@@ -15,8 +15,8 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About Loves Landscapes & Garden Services" },
       { property: "og:description", content: "12 years caring for gardens across Northamptonshire. Friendly, reliable, professional." },
       { property: "og:url", content: "/about" },
-      { property: "og:image", content: "/hero/service-landscaping.jpg" },
-      { name: "twitter:image", content: "/hero/service-landscaping.jpg" },
+      { property: "og:image", content: "/services/landscaping.jpg" },
+      { name: "twitter:image", content: "/services/landscaping.jpg" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
@@ -41,7 +41,7 @@ function AboutPage() {
         eyebrow="About Us"
         title="Local. Reliable. Passionate about gardens."
         subtitle={`12 years of caring for outdoor spaces across ${SITE.area}.`}
-        image="/hero/service-landscaping.jpg"
+        image="/services/landscaping.jpg"
         height="short"
       />
 
@@ -56,9 +56,9 @@ function AboutPage() {
           </div>
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} className="grid grid-cols-2 gap-3">
-          <img src="/hero/service-lawn.jpg" alt="Striped lawn" loading="lazy" className="rounded-2xl aspect-[4/5] object-cover shadow-elegant" />
+          <img src="/services/lawn-care.jpg" alt="Striped lawn" loading="lazy" className="rounded-2xl aspect-[4/5] object-cover shadow-elegant" />
           <img src="/projects/p5-after.jpg" alt="Garden transformation" loading="lazy" className="rounded-2xl aspect-[4/5] object-cover shadow-elegant translate-y-10" />
-          <img src="/hero/service-hedge.jpg" alt="Hedge cutting" loading="lazy" className="rounded-2xl aspect-[4/5] object-cover shadow-elegant" />
+          <img src="/services/hedge-cutting.jpg" alt="Hedge cutting" loading="lazy" className="rounded-2xl aspect-[4/5] object-cover shadow-elegant" />
           <img src="/projects/p2-after.jpg" alt="Lawn restoration" loading="lazy" className="rounded-2xl aspect-[4/5] object-cover shadow-elegant translate-y-10" />
         </motion.div>
       </section>

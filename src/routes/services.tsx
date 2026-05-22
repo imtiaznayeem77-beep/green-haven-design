@@ -24,8 +24,8 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Our Services — Loves Landscapes" },
       { property: "og:description", content: "Landscaping, lawn care, hedge cutting, grounds maintenance and garden transformations across Northamptonshire." },
       { property: "og:url", content: "/services" },
-      { property: "og:image", content: "/hero/service-lawn.jpg" },
-      { name: "twitter:image", content: "/hero/service-lawn.jpg" },
+      { property: "og:image", content: "/services/lawn-care.jpg" },
+      { name: "twitter:image", content: "/services/lawn-care.jpg" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
   }),
@@ -65,7 +65,7 @@ function ServicesPage() {
         eyebrow="Our Services"
         title="Premium garden services, tailored to you."
         subtitle="From regular maintenance to full landscape transformations — one trusted local team for every job."
-        image="/hero/service-grounds.jpg"
+        image="/services/grounds-maintenance.jpg"
         height="short"
       />
 

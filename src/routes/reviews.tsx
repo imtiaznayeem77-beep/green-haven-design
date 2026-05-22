@@ -14,8 +14,8 @@ export const Route = createFileRoute("/reviews")({
       { property: "og:title", content: "Customer Reviews — Loves Landscapes" },
       { property: "og:description", content: "Real Facebook reviews from happy customers across Northamptonshire." },
       { property: "og:url", content: "/reviews" },
-      { property: "og:image", content: "/hero/service-lawn.jpg" },
-      { name: "twitter:image", content: "/hero/service-lawn.jpg" },
+      { property: "og:image", content: "/services/lawn-care.jpg" },
+      { name: "twitter:image", content: "/services/lawn-care.jpg" },
     ],
     links: [{ rel: "canonical", href: "/reviews" }],
   }),
@@ -29,7 +29,7 @@ function ReviewsPage() {
         eyebrow="Reviews"
         title="Trusted by gardens across Northamptonshire."
         subtitle="Real feedback from real customers — straight from Facebook."
-        image="/hero/service-lawn.jpg"
+        image="/services/lawn-care.jpg"
         height="short"
       />
 

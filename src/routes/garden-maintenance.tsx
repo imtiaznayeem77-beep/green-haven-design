@@ -44,7 +44,7 @@ function GardenMaintenancePage() {
       />
 
       <section className="container-prose py-24 grid lg:grid-cols-2 gap-14 items-center">
-        <motion.img initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} src="/hero/service-lawn.jpg" alt="Maintained lawn" loading="lazy" className="rounded-3xl aspect-[4/3] object-cover shadow-elegant order-2 lg:order-1" />
+        <motion.img initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} src="/services/lawn-care.jpg" alt="Maintained lawn" loading="lazy" className="rounded-3xl aspect-[4/3] object-cover shadow-elegant order-2 lg:order-1" />
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="order-1 lg:order-2">
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">What's included</span>
           <h2 className="mt-3 font-display text-3xl md:text-5xl leading-tight">Clean. Tidy. Cared for.</h2>
