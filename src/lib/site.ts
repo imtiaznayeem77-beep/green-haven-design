@@ -25,15 +25,14 @@ export const NAV = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
-  { to: "/landscaping", label: "Landscaping" },
-  { to: "/garden-maintenance", label: "Garden Maintenance" },
+  { to: "/projects", label: "Projects" },
   { to: "/gallery", label: "Gallery" },
   { to: "/reviews", label: "Reviews" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
 export const PROJECTS = [
-  { id: 1, before: "/projects/p1-before.jpg", after: "/projects/p1-after.jpg", caption: "Busy day today — tidy ups, first grass cuts and new customers" },
+  { id: 1, before: "/projects/p1-before.jpg", after: "/projects/p1-after.jpg", caption: "Tidy ups, first grass cuts and new customers" },
   { id: 2, before: "/projects/p2-before.jpg", after: "/projects/p2-after.jpg", caption: "Overgrown lawn restored to a crisp, clean finish" },
   { id: 3, before: "/projects/p3-before.jpg", after: "/projects/p3-after.jpg", caption: "Full garden tidy and seasonal refresh" },
   { id: 4, before: "/projects/p4-before.jpg", after: "/projects/p4-after.jpg", caption: "Borders edged, lawn cut, hedges trimmed" },
@@ -45,14 +44,14 @@ export const PROJECTS = [
 ];
 
 export const SERVICES = [
-  { slug: "landscaping", title: "Landscaping", icon: "🌿", description: "Garden transformations, design and full landscape installation." },
-  { slug: "garden-maintenance", title: "Garden Maintenance", icon: "🪴", description: "Regular tidy ups, seasonal care and ongoing garden upkeep." },
-  { slug: "lawn-care", title: "Lawn Care", icon: "🌱", description: "Professional mowing, striping, feeding and lawn restoration." },
-  { slug: "hedge-cutting", title: "Hedge Cutting", icon: "✂️", description: "Precise hedge trimming and shaping for clean defined lines." },
-  { slug: "grounds-maintenance", title: "Grounds Maintenance", icon: "🏡", description: "Reliable upkeep for larger gardens, properties and grounds." },
-  { slug: "strimming", title: "Strimming", icon: "💨", description: "Edges, awkward areas and overgrowth tamed in one visit." },
-  { slug: "weeding", title: "Weeding", icon: "🌾", description: "Borders, paths and patios cleared and kept weed free." },
-  { slug: "border-edging", title: "Border Edging", icon: "📏", description: "Crisp, defined borders that lift the look of any garden." },
-  { slug: "garden-clearances", title: "Garden Clearances", icon: "🍂", description: "Overgrown gardens fully cleared, ready for a fresh start." },
-  { slug: "garden-transformations", title: "Garden Transformations", icon: "✨", description: "Tired outdoor space? We make it beautiful again." },
+  { slug: "landscaping", title: "Landscaping", image: "/services/landscaping.jpg", description: "Garden transformations, design and full landscape installation." },
+  { slug: "garden-maintenance", title: "Garden Maintenance", image: "/services/garden-maintenance.jpg", description: "Regular tidy ups, seasonal care and ongoing garden upkeep." },
+  { slug: "lawn-care", title: "Lawn Care", image: "/services/lawn-care.jpg", description: "Professional mowing, striping, feeding and lawn restoration." },
+  { slug: "hedge-cutting", title: "Hedge Cutting", image: "/services/hedge-cutting.jpg", description: "Precise hedge trimming and shaping for clean defined lines." },
+  { slug: "grounds-maintenance", title: "Grounds Maintenance", image: "/services/grounds-maintenance.jpg", description: "Reliable upkeep for larger gardens, properties and grounds." },
+  { slug: "strimming", title: "Strimming", image: "/services/strimming.jpg", description: "Edges, awkward areas and overgrowth tamed in one visit." },
+  { slug: "weeding", title: "Weeding", image: "/services/weeding.jpg", description: "Borders, paths and patios cleared and kept weed free." },
+  { slug: "border-edging", title: "Border Edging", image: "/services/border-edging.jpg", description: "Crisp, defined borders that lift the look of any garden." },
+  { slug: "garden-clearances", title: "Garden Clearances", image: "/services/garden-clearances.jpg", description: "Overgrown gardens fully cleared, ready for a fresh start." },
+  { slug: "garden-transformations", title: "Garden Transformations", image: "/services/garden-transformations.jpg", description: "Tired outdoor space? We make it beautiful again." },
 ];
