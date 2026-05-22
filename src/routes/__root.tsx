@@ -108,6 +108,11 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SiteLayout />
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
     </QueryClientProvider>
   );
 }
