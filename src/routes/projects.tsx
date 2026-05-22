@@ -77,7 +77,7 @@ function ProjectsPage() {
             </p>
             <div className="mt-7 grid grid-cols-3 gap-3">
               {["Edging", "Lawn restoration", "Borders"].map((t) => (
-                <span key={t} className="text-center text-xs font-semibold uppercase tracking-wider rounded-full bg-primary/10 text-primary px-3 py-2">
+                <span key={t} className="text-center text-xs font-semibold uppercase tracking-wider rounded-full bg-card border border-primary/30 text-primary px-3 py-2">
                   {t}
                 </span>
               ))}
