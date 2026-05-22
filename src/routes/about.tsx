@@ -81,6 +81,8 @@ function AboutPage() {
         </div>
       </section>
 
+      <WhyChooseUs />
+      <GoogleReviewsWidget />
       <CtaBanner />
     </>
   );
