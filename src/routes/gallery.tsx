@@ -86,6 +86,7 @@ function GalleryPage() {
         </div>
       )}
 
+      <GoogleReviewsWidget />
       <CtaBanner />
     </>
   );
