@@ -45,7 +45,7 @@ function Home() {
     <>
       <PageHero
         eyebrow="Northamptonshire's Premium Garden Specialists"
-        title={<>Gardens, crafted with <span className="italic font-serif text-accent" style={{ fontFamily: '"Cormorant Garamond", "Times New Roman", serif' }}>care</span>.</> as unknown as string}
+        title={<>Gardens, crafted with <em className="font-serif not-italic text-accent" style={{ fontFamily: '"Cormorant Garamond", "Times New Roman", serif', fontStyle: "italic" }}>care</em>.</>}
         subtitle="Landscaping, lawn care and garden maintenance — delivered by a trusted local team with twelve years of experience and an obsession for the finish."
         image="/hero/hero-main.jpg"
         height="full"

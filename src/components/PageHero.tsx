@@ -1,12 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import type { ReactNode } from "react";
 import { SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 interface Props {
   eyebrow?: string;
-  title: string;
+  title: ReactNode;
   subtitle?: string;
   image: string;
   height?: "full" | "tall" | "short";
