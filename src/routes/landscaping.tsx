@@ -71,6 +71,8 @@ function LandscapingPage() {
         </div>
       </section>
 
+      <GoogleReviewsWidget />
+      <FaqSection items={LANDSCAPING_FAQS} title="Landscaping questions, answered" />
       <CtaBanner />
     </>
   );
