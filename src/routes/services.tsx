@@ -24,8 +24,8 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Our Services — Loves Landscapes" },
       { property: "og:description", content: "Landscaping, lawn care, hedge cutting, grounds maintenance and garden transformations across Northamptonshire." },
       { property: "og:url", content: "/services" },
-      { property: "og:image", content: "/hero/service-lawn.jpg" },
-      { name: "twitter:image", content: "/hero/service-lawn.jpg" },
+      { property: "og:image", content: "/services/lawn-care.jpg" },
+      { name: "twitter:image", content: "/services/lawn-care.jpg" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
   }),
@@ -33,16 +33,16 @@ export const Route = createFileRoute("/services")({
 });
 
 const IMAGES: Record<string, string> = {
-  landscaping: "/hero/service-landscaping.jpg",
-  "garden-maintenance": "/projects/p1-after.jpg",
-  "lawn-care": "/hero/service-lawn.jpg",
-  "hedge-cutting": "/hero/service-hedge.jpg",
-  "grounds-maintenance": "/hero/service-grounds.jpg",
-  strimming: "/projects/p6-after.jpg",
-  weeding: "/projects/p4-after.jpg",
-  "border-edging": "/projects/p7-after.jpg",
-  "garden-clearances": "/projects/p3-after.jpg",
-  "garden-transformations": "/projects/p5-after.jpg",
+  landscaping: "/services/landscaping.jpg",
+  "garden-maintenance": "/services/garden-maintenance.jpg",
+  "lawn-care": "/services/lawn-care.jpg",
+  "hedge-cutting": "/services/hedge-cutting.jpg",
+  "grounds-maintenance": "/services/grounds-maintenance.jpg",
+  strimming: "/services/strimming.jpg",
+  weeding: "/services/weeding.jpg",
+  "border-edging": "/services/border-edging.jpg",
+  "garden-clearances": "/services/garden-clearances.jpg",
+  "garden-transformations": "/services/garden-transformations.jpg",
 };
 
 const INCLUDES: Record<string, string[]> = {
@@ -65,7 +65,7 @@ function ServicesPage() {
         eyebrow="Our Services"
         title="Premium garden services, tailored to you."
         subtitle="From regular maintenance to full landscape transformations — one trusted local team for every job."
-        image="/hero/service-grounds.jpg"
+        image="/services/grounds-maintenance.jpg"
         height="short"
       />
 
@@ -82,8 +82,10 @@ function ServicesPage() {
               className="scroll-mt-28 grid lg:grid-cols-2 gap-10 items-center"
             >
               <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-                <span className="text-4xl">{s.icon}</span>
-                <h2 className="mt-3 font-display text-3xl md:text-4xl">{s.title}</h2>
+                <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em]">
+                  Service 0{i + 1}
+                </span>
+                <h2 className="mt-4 font-display text-3xl md:text-4xl">{s.title}</h2>
                 <p className="mt-4 text-muted-foreground leading-relaxed text-lg">{s.description}</p>
                 <ul className="mt-6 grid sm:grid-cols-2 gap-3">
                   {INCLUDES[s.slug].map((item) => (
