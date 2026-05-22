@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as LandscapingRouteImport } from './routes/landscaping'
 import { Route as GroundsMaintenanceRouteImport } from './routes/grounds-maintenance'
 import { Route as GardenMaintenanceRouteImport } from './routes/garden-maintenance'
@@ -33,6 +34,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const ReviewsRoute = ReviewsRouteImport.update({
   id: '/reviews',
   path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LandscapingRoute = LandscapingRouteImport.update({
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/garden-maintenance': typeof GardenMaintenanceRoute
   '/grounds-maintenance': typeof GroundsMaintenanceRoute
   '/landscaping': typeof LandscapingRoute
+  '/projects': typeof ProjectsRoute
   '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/garden-maintenance': typeof GardenMaintenanceRoute
   '/grounds-maintenance': typeof GroundsMaintenanceRoute
   '/landscaping': typeof LandscapingRoute
+  '/projects': typeof ProjectsRoute
   '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/garden-maintenance': typeof GardenMaintenanceRoute
   '/grounds-maintenance': typeof GroundsMaintenanceRoute
   '/landscaping': typeof LandscapingRoute
+  '/projects': typeof ProjectsRoute
   '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/garden-maintenance'
     | '/grounds-maintenance'
     | '/landscaping'
+    | '/projects'
     | '/reviews'
     | '/services'
     | '/sitemap.xml'
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/garden-maintenance'
     | '/grounds-maintenance'
     | '/landscaping'
+    | '/projects'
     | '/reviews'
     | '/services'
     | '/sitemap.xml'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/garden-maintenance'
     | '/grounds-maintenance'
     | '/landscaping'
+    | '/projects'
     | '/reviews'
     | '/services'
     | '/sitemap.xml'
@@ -155,6 +167,7 @@ export interface RootRouteChildren {
   GardenMaintenanceRoute: typeof GardenMaintenanceRoute
   GroundsMaintenanceRoute: typeof GroundsMaintenanceRoute
   LandscapingRoute: typeof LandscapingRoute
+  ProjectsRoute: typeof ProjectsRoute
   ReviewsRoute: typeof ReviewsRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -181,6 +194,13 @@ declare module '@tanstack/react-router' {
       path: '/reviews'
       fullPath: '/reviews'
       preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/landscaping': {
@@ -243,6 +263,7 @@ const rootRouteChildren: RootRouteChildren = {
   GardenMaintenanceRoute: GardenMaintenanceRoute,
   GroundsMaintenanceRoute: GroundsMaintenanceRoute,
   LandscapingRoute: LandscapingRoute,
+  ProjectsRoute: ProjectsRoute,
   ReviewsRoute: ReviewsRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
@@ -250,3 +271,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
