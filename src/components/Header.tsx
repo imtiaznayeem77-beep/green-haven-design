@@ -104,10 +104,10 @@ export function Header() {
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
           className={cn(
-            "lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full transition",
+            "lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full transition border",
             scrolled || open
-              ? "bg-primary/10 text-primary"
-              : "bg-white/15 text-white backdrop-blur",
+              ? "bg-card border-primary/30 text-primary"
+              : "bg-white/15 border-white/20 text-white backdrop-blur",
           )}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
