@@ -69,6 +69,8 @@ function GardenMaintenancePage() {
         </div>
       </section>
 
+      <GoogleReviewsWidget />
+      <FaqSection items={MAINT_FAQS} title="Maintenance questions, answered" />
       <CtaBanner />
     </>
   );
