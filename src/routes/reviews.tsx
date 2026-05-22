@@ -47,6 +47,7 @@ function ReviewsPage() {
         <ReviewsList />
       </section>
 
+      <GoogleReviewsWidget />
       <CtaBanner />
     </>
   );
