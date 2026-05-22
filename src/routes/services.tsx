@@ -104,6 +104,9 @@ function ServicesPage() {
         </div>
       </section>
 
+      <GoogleReviewsWidget />
+      <FaqSection items={SERVICES_FAQS} title="Service questions, answered" />
+      <AreasWeCover />
       <CtaBanner title="Need help with your garden?" subtitle="Tell us what you'd like done — we'll come back with a free, honest quote." />
     </>
   );
