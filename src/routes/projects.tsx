@@ -77,7 +77,7 @@ function ProjectsPage() {
             </p>
             <div className="mt-7 grid grid-cols-3 gap-3">
               {["Edging", "Lawn restoration", "Borders"].map((t) => (
-                <span key={t} className="text-center text-xs font-semibold uppercase tracking-wider rounded-full bg-primary/10 text-primary px-3 py-2">
+                <span key={t} className="text-center text-xs font-semibold uppercase tracking-wider rounded-full bg-card border border-primary/30 text-primary px-3 py-2">
                   {t}
                 </span>
               ))}
@@ -117,7 +117,7 @@ function ProjectsPage() {
                   <button
                     onClick={() => setActive(p.id)}
                     aria-label="Expand project"
-                    className="shrink-0 grid place-items-center h-10 w-10 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition"
+                    className="shrink-0 grid place-items-center h-10 w-10 rounded-full bg-card border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition"
                   >
                     <ArrowRight className="h-4 w-4 -rotate-45" />
                   </button>
