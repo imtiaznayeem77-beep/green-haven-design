@@ -45,8 +45,8 @@ function Home() {
     <>
       <PageHero
         eyebrow="Northamptonshire's Premium Garden Specialists"
-        title="Transform your outdoor space, effortlessly."
-        subtitle="Award-quality landscaping, lawn care and garden maintenance — delivered by a trusted local team with 12 years of experience and a passion for the perfect finish."
+        title={<>Gardens, crafted with <span className="italic font-serif text-accent" style={{ fontFamily: '"Cormorant Garamond", "Times New Roman", serif' }}>care</span>.</> as unknown as string}
+        subtitle="Landscaping, lawn care and garden maintenance — delivered by a trusted local team with twelve years of experience and an obsession for the finish."
         image="/hero/hero-main.jpg"
         height="full"
       />
@@ -60,8 +60,8 @@ function Home() {
           <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative order-2 lg:order-1">
             <div className="absolute -inset-6 -z-10 rounded-3xl bg-primary/15 blur-2xl" />
             <div className="grid grid-cols-2 gap-3">
-              <img src="/hero/service-lawn.jpg" alt="Manicured striped lawn" loading="lazy" className="aspect-[3/4] rounded-2xl object-cover shadow-elegant" />
-              <img src="/hero/service-landscaping.jpg" alt="Premium landscaping" loading="lazy" className="aspect-[3/4] rounded-2xl object-cover shadow-elegant translate-y-8" />
+              <img src="/services/lawn-care.jpg" alt="Manicured striped lawn" loading="lazy" className="aspect-[3/4] rounded-2xl object-cover shadow-elegant" />
+              <img src="/services/landscaping.jpg" alt="Premium landscaping" loading="lazy" className="aspect-[3/4] rounded-2xl object-cover shadow-elegant translate-y-8" />
             </div>
             <div className="absolute -bottom-6 -right-2 md:right-6 rounded-2xl bg-card border border-border/60 shadow-elegant p-4 max-w-[220px]">
               <div className="flex items-center gap-1 text-accent">
