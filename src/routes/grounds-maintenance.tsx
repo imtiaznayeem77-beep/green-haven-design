@@ -3,6 +3,15 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { CtaBanner } from "@/components/CtaBanner";
+import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
+import { FaqSection } from "@/components/FaqSection";
+
+const GROUNDS_FAQS = [
+  { q: "What size sites do you cover?", a: "Anything from a large private estate to small commercial grounds, holiday lets and rural properties. If it needs reliable, year-round upkeep — we'll quote for it." },
+  { q: "Can you provide tailored schedules?", a: "Yes. We build a visit schedule around your site, peak seasons, and any events or inspections you need everything looking sharp for." },
+  { q: "Do you handle commercial as well as residential?", a: "Both. Schools, holiday lets, business parks and private estates all benefit from the same attention to detail and reliable consistency." },
+  { q: "Are you insured for larger sites?", a: "Fully — public liability insurance and professional equipment as standard, with risk assessments available on request for commercial sites." },
+];
 
 export const Route = createFileRoute("/grounds-maintenance")({
   head: () => ({
