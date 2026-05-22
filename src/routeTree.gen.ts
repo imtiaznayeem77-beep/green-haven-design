@@ -10,12 +10,48 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as LandscapingRouteImport } from './routes/landscaping'
+import { Route as GroundsMaintenanceRouteImport } from './routes/grounds-maintenance'
+import { Route as GardenMaintenanceRouteImport } from './routes/garden-maintenance'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LandscapingRoute = LandscapingRouteImport.update({
+  id: '/landscaping',
+  path: '/landscaping',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GroundsMaintenanceRoute = GroundsMaintenanceRouteImport.update({
+  id: '/grounds-maintenance',
+  path: '/grounds-maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GardenMaintenanceRoute = GardenMaintenanceRouteImport.update({
+  id: '/garden-maintenance',
+  path: '/garden-maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -32,30 +68,82 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/garden-maintenance': typeof GardenMaintenanceRoute
+  '/grounds-maintenance': typeof GroundsMaintenanceRoute
+  '/landscaping': typeof LandscapingRoute
+  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/garden-maintenance': typeof GardenMaintenanceRoute
+  '/grounds-maintenance': typeof GroundsMaintenanceRoute
+  '/landscaping': typeof LandscapingRoute
+  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/garden-maintenance': typeof GardenMaintenanceRoute
+  '/grounds-maintenance': typeof GroundsMaintenanceRoute
+  '/landscaping': typeof LandscapingRoute
+  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/services'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/gallery'
+    | '/garden-maintenance'
+    | '/grounds-maintenance'
+    | '/landscaping'
+    | '/reviews'
+    | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/services'
-  id: '__root__' | '/' | '/about' | '/services'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/gallery'
+    | '/garden-maintenance'
+    | '/grounds-maintenance'
+    | '/landscaping'
+    | '/reviews'
+    | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/gallery'
+    | '/garden-maintenance'
+    | '/grounds-maintenance'
+    | '/landscaping'
+    | '/reviews'
+    | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  GalleryRoute: typeof GalleryRoute
+  GardenMaintenanceRoute: typeof GardenMaintenanceRoute
+  GroundsMaintenanceRoute: typeof GroundsMaintenanceRoute
+  LandscapingRoute: typeof LandscapingRoute
+  ReviewsRoute: typeof ReviewsRoute
   ServicesRoute: typeof ServicesRoute
 }
 
@@ -66,6 +154,48 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/landscaping': {
+      id: '/landscaping'
+      path: '/landscaping'
+      fullPath: '/landscaping'
+      preLoaderRoute: typeof LandscapingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/grounds-maintenance': {
+      id: '/grounds-maintenance'
+      path: '/grounds-maintenance'
+      fullPath: '/grounds-maintenance'
+      preLoaderRoute: typeof GroundsMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/garden-maintenance': {
+      id: '/garden-maintenance'
+      path: '/garden-maintenance'
+      fullPath: '/garden-maintenance'
+      preLoaderRoute: typeof GardenMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -88,6 +218,12 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  GalleryRoute: GalleryRoute,
+  GardenMaintenanceRoute: GardenMaintenanceRoute,
+  GroundsMaintenanceRoute: GroundsMaintenanceRoute,
+  LandscapingRoute: LandscapingRoute,
+  ReviewsRoute: ReviewsRoute,
   ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
