@@ -3,6 +3,7 @@ import { Star, Facebook } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { ReviewsList } from "@/components/ReviewsList";
 import { CtaBanner } from "@/components/CtaBanner";
+import { GoogleReviewsWidget } from "@/components/GoogleReviewsWidget";
 import { SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/reviews")({
