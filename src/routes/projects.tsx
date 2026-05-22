@@ -117,7 +117,7 @@ function ProjectsPage() {
                   <button
                     onClick={() => setActive(p.id)}
                     aria-label="Expand project"
-                    className="shrink-0 grid place-items-center h-10 w-10 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition"
+                    className="shrink-0 grid place-items-center h-10 w-10 rounded-full bg-card border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition"
                   >
                     <ArrowRight className="h-4 w-4 -rotate-45" />
                   </button>
