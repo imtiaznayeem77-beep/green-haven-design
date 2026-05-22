@@ -55,6 +55,8 @@ function GroundsPage() {
         <motion.img initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} src="/hero/service-grounds.jpg" alt="Estate grounds maintenance" loading="lazy" className="rounded-3xl aspect-[4/3] object-cover shadow-elegant" />
       </section>
 
+      <GoogleReviewsWidget />
+      <FaqSection items={GROUNDS_FAQS} title="Grounds maintenance, answered" />
       <CtaBanner title="Looking after a larger property?" subtitle="We tailor schedules and pricing to suit. Get in touch for a free site visit and quote." />
     </>
   );
